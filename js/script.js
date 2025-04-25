@@ -19,6 +19,9 @@ function ValidarPass(id1, id2){
         if(/[!@#$%^&*(),.?":{}|<>]/.test(user)){
             alert('Seu nome de Usuario não pode conter caracteres especiais');
             return false;
+        }else if(/[A-Z]/.test(user)){
+            alert('Seu nome de Usuario não pode conter letras maiúsculas');
+            return false;
         }
 
         if(pass.length < 8){
