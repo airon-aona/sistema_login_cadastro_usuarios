@@ -37,7 +37,7 @@
                         <a class="text-warning" href="">Esqueci minha senha</a>
                     </div>
                 </form>
-                <a class="text-danger" href="./cadastro.html">Não tenho cadastro</a>
+                <a class="text-danger" href="./cadastro.php">Não tenho cadastro</a>
             </div>
         </main>
 
