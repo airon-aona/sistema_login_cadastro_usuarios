@@ -13,7 +13,7 @@ Um sistema de login e cadastro simples que pode ser implementado em diversos tip
   - Campo de Username
   - Campo de Senha
     - Botão de vizualizar senha
-  - Opção de esqueci minha senha
+  - Opção de esqueci minha senha (Sem funcionalidade no momento)
  
 - Tela de Cadastro
   - Campo de Email
