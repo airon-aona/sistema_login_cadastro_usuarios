@@ -27,4 +27,4 @@ Ao criar seu cadastro há uma validação de nome de usuário, verificando se o 
 
 ## Futuras melhorias
 - [X] Ativação do Esqueci minha senha
-- [ ] Validação de email
+- [ ] Validação de email no cadastro
