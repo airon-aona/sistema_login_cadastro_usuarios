@@ -11,36 +11,39 @@ function ViewPass(id) {
     }
 }
 
-function ValidarPass(id1, id2){
-        var pass = document.getElementById(id1).value;
-        var passConfirm = document.getElementById(id2).value;
-        var user = document.getElementById('user').value;
+function ValidarUser(){
+    var user = document.getElementById('user').value;
 
-        if(/[!@#$%^&*(),.?":{}|<>]/.test(user)){
-            alert('Seu nome de Usuario não pode conter caracteres especiais');
-            return false;
-        }else if(/[A-Z]/.test(user)){
-            alert('Seu nome de Usuario não pode conter letras maiúsculas');
-            return false;
-        }
-
-        if(pass.length < 8){
-            alert('A senha deve ter no minimo 8 caracteres');
-            return false;
-        }else if(!/[A-Z]/.test(pass)){
-            alert('A senha deve conter pelo menos uma letra maiúscula');
-            return false;
-        }else if(!/[a-z]/.test(pass)){
-            alert('A senha deve conter pelo menos uma letra minúscula');
-            return false;
-        }else if(!/[0-9]/.test(pass)){
-            alert('A senha deve conter pelo menos um número');
-            return false;
-        }else if(!/[!@#$%^&*(),.?":{}|<>]/.test(pass)){
-            alert('A senha deve conter pelo menos um caractere especial');
-            return false;
-        }else if(pass != passConfirm){
-            alert('As Senhas são diferentes');
-            return false;
-        }
+    if(/[!@#$%^&*(),.?":{}|<>]/.test(user)){
+        alert('Seu nome de Usuario não pode conter caracteres especiais');
+        return false;
+    }else if(/[A-Z]/.test(user)){
+        alert('Seu nome de Usuario não pode conter letras maiúsculas');
+        return false;
     }
+}
+
+function ValidarPass(id1, id2){
+    var pass = document.getElementById(id1).value;
+    var passConfirm = document.getElementById(id2).value;
+
+    if(pass.length < 8){
+        alert('A senha deve ter no minimo 8 caracteres');
+        return false;
+    }else if(!/[A-Z]/.test(pass)){
+        alert('A senha deve conter pelo menos uma letra maiúscula');
+        return false;
+    }else if(!/[a-z]/.test(pass)){
+        alert('A senha deve conter pelo menos uma letra minúscula');
+        return false;
+    }else if(!/[0-9]/.test(pass)){
+        alert('A senha deve conter pelo menos um número');
+        return false;
+    }else if(!/[!@#$%^&*(),.?":{}|<>]/.test(pass)){
+        alert('A senha deve conter pelo menos um caractere especial');
+        return false;
+    }else if(pass != passConfirm){
+        alert('As Senhas são diferentes');
+        return false;
+    }
+}

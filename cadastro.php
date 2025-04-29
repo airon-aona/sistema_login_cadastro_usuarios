@@ -16,7 +16,7 @@
         
         <main class="d-flex align-items-center justify-content-center">
             <div class="m-5">
-                <form method="POST" action="login.php" class="border border-2 p-5 rounded-4" onsubmit="return ValidarPass('Pass1Input', 'Pass2Input')">
+                <form method="POST" action="login.php" class="border border-2 p-5 rounded-4" onsubmit="return ValidarPass('Pass1Input', 'Pass2Input'); return ValidarUser()">
                     <div class="col mb-3">
                         <label for="validationCustomUsername" class="form-label">email</label>
                         <div class="input-group has-validation">

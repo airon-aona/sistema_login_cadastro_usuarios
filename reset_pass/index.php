@@ -16,30 +16,64 @@
         
         <main class="d-flex align-items-center justify-content-center">
             <div class="m-5">
-                <form method="POST" action="login.php" class="border border-2 p-5 rounded-4">
+                <form method="POST" action="" class="border border-2 p-5 rounded-4">
                     <div class="col mb-3">
-                        <label for="validationCustomUsername" class="form-label">Username</label>
+                        <label for="validationCustomUsername" class="form-label">username</label>
                         <div class="input-group has-validation">
                           <input type="text" class="form-control" name="username" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                         </div>
                      </div>
-                    <div class="col mb-3">
-                        <label for="validationCustomUsername" class="form-label">Password</label>
-                        <div class="input-group has-validation">
-                          <input type="password" class="form-control" name="senha" id="Pass1Input" aria-describedby="inputGroupPrepend" required>
-                          <span onclick="ViewPass(this.id)" id="Pass1" class="input-group-text"><i id="Pass1Icon" class="bi bi-eye-fill"></i></span>
-                        </div>
-                    </div>
                     <div class="d-flex mb-3">
-                        <input class="btn btn-primary w-100" type="submit" name="login" id="login" value="Entrar" />
-                    </div>
-                    <div class="d-flex flex-column">
-                        <a class="text-warning" href="reset_pass/">Esqueci minha senha</a>
+                        <input class="btn btn-primary w-100 col me-1" type="submit" name="reset" id="reset" value="Próximo" />
+                        <a class="btn btn-warning w-100 col ms-1" href="../">Cancelar</a>
                     </div>
                 </form>
-                <a class="text-danger" href="./cadastro.html">Não tenho cadastro</a>
             </div>
         </main>
 
     </body>
 </html>
+
+<?php
+
+if (isset($_POST['reset'])) {
+    
+    require_once('../config/config.php');
+    require_once('./env_email.php');
+    
+    $username = $_POST['username'];
+    
+    $sql = "SELECT email FROM usuarios WHERE username = ?";
+    $stmt = $conn->prepare($sql);
+
+    $stmt->bind_param("s", $username);
+    
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    
+    if($result->num_rows > 0){
+
+    $row = $result->fetch_assoc();
+    
+    $email = $row['email'];
+    
+    $codigo = rand(111111, 999999);
+    
+    enviarNovaSenha($email, $username, $codigo);
+    
+    session_start();
+    
+    $_SESSION['codigo'] = $codigo;
+    $_SESSION['username'] = $username;
+    
+    header('Location: ./confirme_email.php');
+
+    }else{
+        die("<script>alert('Usuário não encontrado')</script>");
+        ;
+    }
+
+}
+
+?>
