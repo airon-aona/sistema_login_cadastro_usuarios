@@ -31,42 +31,53 @@ if ($login == 'Entrar') {
     
     echo '<br>Login feito com sucesso!';
     
-}else if($login == 'Cadastrar'){
+}else if($login == 'Validar'){
 
     $email = $_POST['email'];
     $username = $_POST['username'];
     $senha = $_POST['senha'];
-
-    //Opções opcionais
-    $options = [
-        'cost' => 15,
-    ];
-    // Gerando a hash
-    $hash = password_hash($senha, PASSWORD_DEFAULT, $options);
-
-    $sql = "SELECT id FROM usuarios WHERE username = ?";
-    $stmt = $conn->prepare($sql);
-
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-
-    $result = $stmt->get_result();
-
-    if($result->num_rows > 0){
-        echo "<script> alert('Usuário ou Email já existe, Tente outro.'); </script>";
-        echo "<script> window.history.back(); </script>";
-    }else{
-        $sql_insert = "INSERT INTO usuarios (username, email, senha) VALUES (?, ?, ?)";
-        $stmt_insert = $conn->prepare($sql_insert);
-        $stmt_insert->bind_param('sss', $username, $email, $hash);
-        $stmt_insert->execute();
-    }
+    $user_codigo = $_POST['user_code'];
     
-    echo '<br>Cadastrado com Sucesso!';
+    session_start();
+    $codigo = $_SESSION['codigo'];
+    
+    if($user_codigo == $codigo){
 
-    $stmt_insert->close();
-    $stmt->close();
-    $conn->close();
+        //Opções opcionais
+        $options = [
+            'cost' => 15,
+        ];
+        // Gerando a hash
+        $hash = password_hash($senha, PASSWORD_DEFAULT, $options);
+    
+        $sql = "SELECT id FROM usuarios WHERE username = ?";
+        $stmt = $conn->prepare($sql);
+    
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+    
+        $result = $stmt->get_result();
+    
+        if($result->num_rows > 0){
+            echo "<script> alert('Usuário ou Email já existe, Tente outro.'); </script>";
+            echo "<script> window.history.back(); </script>";
+        }else{
+            $sql_insert = "INSERT INTO usuarios (username, email, senha) VALUES (?, ?, ?)";
+            $stmt_insert = $conn->prepare($sql_insert);
+            $stmt_insert->bind_param('sss', $username, $email, $hash);
+            $stmt_insert->execute();
+        }
+        
+        echo '<br>Cadastrado com Sucesso!';
+    
+        $stmt_insert->close();
+        $stmt->close();
+        $conn->close();
+
+    }else{
+        echo "<script> alert('Algo deu errado.'); </script>";
+        echo "<script> window.history.go(-2); </script>";
+    }
     
 }else{
     echo "<script> alert('Algo deu errado.'); </script>";

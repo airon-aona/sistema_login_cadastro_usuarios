@@ -39,7 +39,7 @@
 if (isset($_POST['reset'])) {
     
     require_once('../config/config.php');
-    require_once('./env_email.php');
+    require_once('../env_email.php');
     
     $username = $_POST['username'];
     
