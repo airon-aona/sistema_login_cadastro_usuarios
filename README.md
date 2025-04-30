@@ -25,6 +25,9 @@ Um sistema de login e cadastro simples que pode ser implementado em diversos tip
 ### Validação de Usuario e Senha
 Ao criar seu cadastro há uma validação de nome de usuário, verificando se o nome de Usuario atende aos requisitos (não conter caracteres especiais, não conter letra maiusculas) e uma validação de senha, verificando se a senha contem no minimo 8 carácteres, com letras maiúsculas e minúsculas, caracteres especiais e numeros,  além da verificação da senha e a confirmação da senha sejam iguais.
 
+### Esqueci minha senha
+Ao clicar em "Esqueci minha senha", o usuário é redirecionado para uma página pedindo o usename dele, após informar o username, é enviado um email com um código de 6 digitos para o email correspondente, o usuário é redirecionado para uma tela pedindo a confirmação do código e assim que confirmado será redirecionado para poder escolher uma nova senha atendendo os requisitos do [Validação de Senha](#validação-de-usuario-e-senha). 
+
 ## Futuras melhorias
 - [X] Ativação do Esqueci minha senha
 - [X] Validação de email no cadastro
