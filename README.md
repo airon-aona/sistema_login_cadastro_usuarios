@@ -1,4 +1,4 @@
-# Sistema de Cadastro e Login de Usuários
+# 🔐 Sistema de Cadastro e Login de Usuários
 Um sistema de login e cadastro simples que pode ser implementado em diversos tipos de site.
 
 ## 🧪 Tecnologias utilizadas
