@@ -1,40 +1,54 @@
 # 🔐 Sistema de Cadastro e Login de Usuários
-Um sistema de login e cadastro simples que pode ser implementado em diversos tipos de site.
+
+Um sistema simples de login e cadastro, que pode ser implementado em diversos tipos de site.
 
 ## 🧪 Tecnologias utilizadas
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
-![MySQL](https://img.shields.io/badge/PHPMailer-0F0F0F?style=for-the-badge&logo=phpmailer&logoColor=white)
+
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)  
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)  
+![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)  
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)  
+![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)  
+![PHPMailer](https://img.shields.io/badge/PHPMailer-0F0F0F?style=for-the-badge&logo=phpmailer&logoColor=white)
 
 ## 🔧 Funcionalidades
-- Tela de Login
-  - Campo de Username
-  - Campo de Senha
-    - Botão de vizualizar senha
-  - Opção de esqueci minha senha
- 
-- Tela de Cadastro
-  - Campo de Email
-  - Campo de Username
-  - Campo de Senha e Confirmação de Senha
 
-## Recursos
+- **Tela de Login**
+  - Campo de nome de usuário
+  - Campo de senha
+    - Botão para visualizar a senha
+  - Link "Esqueci minha senha"
 
-### Validação de Usuario e Senha
-Ao criar seu cadastro há uma validação de nome de usuário, verificando se o nome de Usuario atende aos requisitos (não conter caracteres especiais, não conter letra maiusculas) e uma validação de senha, verificando se a senha contem no minimo 8 carácteres, com letras maiúsculas e minúsculas, caracteres especiais e numeros,  além da verificação da senha e a confirmação da senha sejam iguais.
+- **Tela de Cadastro**
+  - Campo de e-mail
+  - Campo de nome de usuário
+  - Campo de senha e confirmação de senha
+
+## ✅ Recursos
+
+### Validação de usuário e senha
+
+No momento do cadastro, há validação para:
+
+- **Nome de usuário**: deve estar em minúsculas, sem caracteres especiais.  
+- **Senha**: mínimo de 8 caracteres, incluindo letras maiúsculas, minúsculas, números e caracteres especiais.  
+- **Confirmação de senha**: deve ser idêntica à senha principal.
 
 ### Esqueci minha senha
-Ao clicar em "Esqueci minha senha", o usuário é redirecionado para uma página pedindo o usename dele, após informar o username, é enviado um email com um código de 6 digitos para o email correspondente, o usuário é redirecionado para uma tela pedindo a confirmação do código e assim que confirmado será redirecionado para poder escolher uma nova senha atendendo os requisitos do **Validação de Senha**.
 
-### Confirmação de email no cadastro
-Ao criar seu cadastro, é enviado um código de 6 digitos para o email informado, assim que confirmado esse código seu cadastro é salvo.
+1. O usuário informa seu nome de usuário.
+2. Um e-mail com um código de 6 dígitos é enviado para o e-mail correspondente.
+3. Após a confirmação do código, o usuário pode cadastrar uma nova senha conforme as regras de validação.
+
+### Confirmação de e-mail no cadastro
+
+- Durante o cadastro, um código de 6 dígitos é enviado para o e-mail informado.
+- O cadastro só é finalizado após a confirmação desse código.
 
 ## 🚀 Futuras melhorias
-- [X] Ativação do Esqueci minha senha
-- [X] Validação de email no cadastro
+
+- [x] Ativação da função "Esqueci minha senha"  
+- [x] Validação de e-mail no cadastro
 
 ## 🧑‍💻 Autor
 
