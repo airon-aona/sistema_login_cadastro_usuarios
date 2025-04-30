@@ -7,6 +7,7 @@ Um sistema de login e cadastro simples que pode ser implementado em diversos tip
 ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
+![MySQL](https://img.shields.io/badge/PHPMailer-0F0F0F?style=for-the-badge&logo=phpmailer&logoColor=white)
 
 ## Funcionalidades
 - Tela de Login
