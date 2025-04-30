@@ -1,7 +1,7 @@
 # Sistema de Cadastro e Login de Usuários
 Um sistema de login e cadastro simples que pode ser implementado em diversos tipos de site.
 
-## Tecnologias utilizadas
+## 🧪 Tecnologias utilizadas
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -9,7 +9,7 @@ Um sistema de login e cadastro simples que pode ser implementado em diversos tip
 ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/PHPMailer-0F0F0F?style=for-the-badge&logo=phpmailer&logoColor=white)
 
-## Funcionalidades
+## 🔧 Funcionalidades
 - Tela de Login
   - Campo de Username
   - Campo de Senha
@@ -32,6 +32,14 @@ Ao clicar em "Esqueci minha senha", o usuário é redirecionado para uma página
 ### Confirmação de email no cadastro
 Ao criar seu cadastro, é enviado um código de 6 digitos para o email informado, assim que confirmado esse código seu cadastro é salvo.
 
-## Futuras melhorias
+## 🚀 Futuras melhorias
 - [X] Ativação do Esqueci minha senha
 - [X] Validação de email no cadastro
+
+## 🧑‍💻 Autor
+
+Desenvolvido por [Airon](https://github.com/airon-aona/)
+
+---
+
+💡 Sinta-se à vontade para clonar, testar e sugerir melhorias!
