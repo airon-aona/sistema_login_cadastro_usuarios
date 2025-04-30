@@ -28,6 +28,9 @@ Ao criar seu cadastro há uma validação de nome de usuário, verificando se o 
 ### Esqueci minha senha
 Ao clicar em "Esqueci minha senha", o usuário é redirecionado para uma página pedindo o usename dele, após informar o username, é enviado um email com um código de 6 digitos para o email correspondente, o usuário é redirecionado para uma tela pedindo a confirmação do código e assim que confirmado será redirecionado para poder escolher uma nova senha atendendo os requisitos do **Validação de Senha**.
 
+### Confirmação de email no cadastro
+Ao criar seu cadastro, é enviado um código de 6 digitos para o email informado, assim que confirmado esse código seu cadastro é salvo.
+
 ## Futuras melhorias
 - [X] Ativação do Esqueci minha senha
 - [X] Validação de email no cadastro
