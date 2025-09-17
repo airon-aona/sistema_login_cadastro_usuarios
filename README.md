@@ -45,7 +45,7 @@ No momento do cadastro, há validação para:
 - Durante o cadastro, um código de 6 dígitos é enviado para o e-mail informado.
 - O cadastro só é finalizado após a confirmação desse código.
 
-## 🚀 Futuras melhorias
+## 🚀 Melhorias
 
 - [x] Ativação da função "Esqueci minha senha"  
 - [x] Validação de e-mail no cadastro
